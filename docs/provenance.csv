@@ -1,0 +1,2 @@
+asset_id,path,type,author,vendor,licence,licence_file,commercial_ok,date_added,notes
+example.template,Assets/ThirdParty/example/README.md,doc,RealCricket team,internal,proprietary,ThirdParty/example/LICENSE,yes,2026-11-22,TEMPLATE ROW — replace or delete before first third-party intake
