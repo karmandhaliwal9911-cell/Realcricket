@@ -1,0 +1,73 @@
+# ---------------------------------------------------------------------------
+# RealCricket — Unity + tooling ignores
+# ---------------------------------------------------------------------------
+
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Ss]creenshots/
+
+# Addressables / asset bundles output
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*
+/[Ss]erver[Dd]ata/*
+/[Bb]uilds/
+
+# IDE / editor
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.DS_Store
+Thumbs.db
+
+# Unity crash / debug artifacts
+sysinfo.txt
+crashlytics-build.properties
+*.stackdump
+
+# Build outputs and installers (regenerate, never commit)
+/BuildOutput/
+/Artifacts/
+*.apk
+*.aab
+*.aab.meta
+*.unitypackage
+*.exe
+*.msi
+*.zip
+*.7z
+
+# Reference material (raw mocap, footage, photos) lives on the studio NAS
+/reference/
+
+# Local secrets / machine config
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+/signing/
+secrets/
+
+# Tool caches
+/tools/**/node_modules/
+/tools/**/.venv/
+/tools/**/__pycache__/
