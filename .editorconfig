@@ -1,0 +1,63 @@
+# RealCricket — shared editor and analyzer configuration.
+# Applies to all C# in the repository, including Unity scripts under Assets/.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{json,yml,yaml,md,csv}]
+indent_size = 2
+
+[*.{meta,prefab,unity,asset,mat,anim,controller}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.sh]
+indent_size = 2
+
+# ---------------------------------------------------------------------------
+# C# style
+# ---------------------------------------------------------------------------
+[*.cs]
+indent_size = 4
+
+# 'this.' is redundant.
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion
+
+# Language keywords instead of BCL type names (int, not Int32).
+dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
+dotnet_style_predefined_type_for_member_access = true:suggestion
+
+# Explicit accessibility modifiers are required on non-interface members.
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:warning
+
+# Use var only when the type is apparent.
+csharp_style_var_for_built_in_types = false:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:suggestion
+
+# Expression-bodied members: allowed for accessors and simple members only.
+csharp_style_expression_bodied_methods = false:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion
+csharp_style_expression_bodied_accessors = true:suggestion
+
+# Namespaces: file-scoped is not available at C# 9 in Unity, so block-scoped.
+csharp_style_namespace_declarations = block_scoped:suggestion
+
+# Readability and correctness rules the simulation depends on.
+dotnet_diagnostic.CA1303.severity = none
+dotnet_diagnostic.IDE0055.severity = warning
+
+# Explicitly disabled: Unity serialization needs fields, not auto-properties.
+dotnet_diagnostic.CA1051.severity = none

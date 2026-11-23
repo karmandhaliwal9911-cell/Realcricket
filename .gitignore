@@ -71,3 +71,18 @@ secrets/
 /tools/**/node_modules/
 /tools/**/.venv/
 /tools/**/__pycache__/
+
+# ---------------------------------------------------------------------------
+# .NET build output — recursive, at any depth (engine-free Core toolchain, M0.1)
+# ---------------------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+
+# ---------------------------------------------------------------------------
+# .NET solution/project files are source, not editor droppings.
+# The generic IDE rules above ignore *.csproj and *.sln, so re-include the
+# RealCricket .NET sources here. These negations must stay last: git uses the
+# final matching pattern.
+# ---------------------------------------------------------------------------
+!RealCricket.sln
+!tools/dotnet/**/*.csproj

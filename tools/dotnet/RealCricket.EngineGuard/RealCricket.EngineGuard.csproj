@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RealCricket.EngineGuard — developer tool, never shipped, never loaded by
+    Unity. Reads CLI metadata of a compiled assembly and fails if it references
+    UnityEngine / UnityEditor assemblies, namespaces or type names.
+
+    Deliberately kept OUT of RealCricket.sln so the solution stays limited to
+    the shipped core and its tests. The wrapper script builds this project on
+    demand: tools/dev/check-engine-independence.sh
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>RealCricket.EngineGuard</AssemblyName>
+    <RootNamespace>RealCricket.EngineGuard</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Deterministic>true</Deterministic>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <IsPackable>false</IsPackable>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>
